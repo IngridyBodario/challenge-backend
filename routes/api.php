@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/DesafioBackend/{id_api}', 'App\Http\Controllers\ApiController@api');
+Route::post('/ChallengeBackend/{id_api}', 'App\Http\Controllers\ApiController@api');

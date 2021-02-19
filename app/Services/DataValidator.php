@@ -44,4 +44,21 @@ class DataValidator
             ];
         }
     }
+
+    public function treatValue($value) {
+        $number = preg_replace("/[^0-9]/", "", $value);
+        if(empty($number)) {
+            return [
+                'error' => true,
+                'message' => 'Valor invalido'
+            ];
+        }
+        $int = substr($number, 0, -2);
+        $decimal = substr($number, -2);
+        return [
+            'error' => false,
+            'value' => $int.'.'.$decimal
+        ];
+
+    }
 }
