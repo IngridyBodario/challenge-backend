@@ -9,6 +9,7 @@ Desafio back, cadastro de usuários e fluxo de transferências
 
 **Executar**
 ```
+git clone https://github.com/IngridyBodario/challenge-backend.git
 sudo -u postgres psql -c 'create database challengedb;'
 php artisan migrate
 php artisan serve
