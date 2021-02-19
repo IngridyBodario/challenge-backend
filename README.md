@@ -9,13 +9,13 @@ Desafio back, cadastro de usuários e fluxo de transferências
 
 Rodar
 ```
-sudo -u postgres psql -c 'create database desafiodb;'
+sudo -u postgres psql -c 'create database challengedb;'
 php artisan migrate
 php artisan serve
 ```
 
 ## Aplicação
-**/Register**
+**/api/ChallengeBackend/Register**
 - Rota para salvar os dados do usuário
 ```
 entrada
@@ -37,7 +37,7 @@ retorno
    }
 }
 ```
-**/Transaction**
+**/api/ChallengeBackend/Transaction**
 - Rota para realizar transferência
 
 ```
@@ -52,7 +52,10 @@ entrada
 retorno
 {
    "error":false,
-   "result":"ok"
+   "result": {
+        "Mensagem:": "Transferencia realizada com sucesso",
+        "Saldo Atualizado": 10
+    }
 }
 ```
 
