@@ -7,6 +7,13 @@ Desafio back, cadastro de usuários e fluxo de transferências
 - PostgreSQL 10.15
 - geekcom/validator-docs => Validador de cpf/cnpj (escolhi usa-lo para otimizar o tempo).
 
+Rodar
+```
+sudo -u postgres psql -c 'create database desafiodb;'
+php artisan migrate
+php artisan serve
+```
+
 ## Aplicação
 **/Register**
 - Rota para salvar os dados do usuário
